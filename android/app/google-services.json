@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "738779365813",
+    "firebase_url": "https://instagram-be31e-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "instagram-be31e",
+    "storage_bucket": "instagram-be31e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:738779365813:android:6edc107c1d9f42223419fc",
+        "android_client_info": {
+          "package_name": "com.example.instagram_clone"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "738779365813-1m87o4um4mvpne812lt99fheke7objo8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCiL4oqAu-KVcqngEJDQaBiPNub5jRlVRs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "738779365813-1m87o4um4mvpne812lt99fheke7objo8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
