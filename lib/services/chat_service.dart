@@ -8,6 +8,9 @@ class ChatServie {
     await getRef(message.senderId, message.recieverId)
         .push()
         .set(message.toJson(message));
+    await getRef(message.recieverId, message.senderId)
+        .push()
+        .set(message.toJson(message));
   }
 
   DatabaseReference getRef(String senderId, String recieverId) {

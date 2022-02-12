@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:instagram_clone/components/chat_textfield.dart';
 import 'package:instagram_clone/components/chat_widget.dart';
+import 'package:instagram_clone/components/user_info.dart';
 import 'package:instagram_clone/models/message.dart';
 import 'package:instagram_clone/models/user_model.dart';
 import 'package:instagram_clone/modules/chat/chat_controller.dart';
@@ -46,7 +47,8 @@ class ChatScreen extends StatelessWidget {
                                   MessageModel.fromJson(values[index]);
                               return ChatWidget(
                                 text: message.content,
-                                isMe: message.senderId == '1',
+                                isMe:
+                                    message.senderId == UserInfo.currentuserId,
                                 date: message.date,
                               );
                             }),
