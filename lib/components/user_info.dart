@@ -1,4 +1,4 @@
 class UserInfo {
   static String? userToken;
-  static String? currentuserId;
+  static String? currentuserId = '1';
 }

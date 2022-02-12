@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:instagram_clone/modules/chat/chat_screen.dart';
 import 'package:instagram_clone/modules/login/login_controller.dart';
 import 'package:instagram_clone/modules/profile/profile_controller.dart';
 import 'package:instagram_clone/services/login_service.dart';
@@ -14,6 +15,11 @@ class ProfileScreen extends StatelessWidget {
     return Scaffold(
         body: Column(
       children: [
+        TextButton(
+            onPressed: () {
+              Get.toNamed('/ChatScreen');
+            },
+            child: Text("aaa")),
         SizedBox(
           height: MediaQuery.of(context).size.height * 0.05,
         ),

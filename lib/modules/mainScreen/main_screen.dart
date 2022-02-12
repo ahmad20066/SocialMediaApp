@@ -5,6 +5,7 @@ import 'package:get/get.dart';
 import 'package:instagram_clone/components/post/post_widget.dart';
 import 'package:instagram_clone/models/user_model.dart';
 import 'package:instagram_clone/modules/animation_controller.dart';
+import 'package:instagram_clone/modules/dm/dm_screen.dart';
 import 'package:instagram_clone/modules/mainScreen/main_screen_controller.dart';
 import 'package:instagram_clone/services/post_services.dart';
 import 'package:instagram_clone/services/user_services.dart';
@@ -18,6 +19,19 @@ class MainScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
+          actions: [
+            Align(
+              alignment: Alignment.topLeft,
+              child: IconButton(
+                  onPressed: () {
+                    Get.toNamed('/DmScreen', arguments: {'id': '2'});
+                  },
+                  icon: Icon(
+                    Icons.mail_outline,
+                    color: Colors.black,
+                  )),
+            )
+          ],
           backgroundColor: Colors.white,
           title: Row(
             children: [
@@ -28,7 +42,7 @@ class MainScreen extends StatelessWidget {
               Text(
                 "Instagram",
                 style: TextStyle(color: Colors.black, fontFamily: 'Yellowtail'),
-              )
+              ),
             ],
           ),
         ),

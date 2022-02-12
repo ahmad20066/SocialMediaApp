@@ -1,13 +1,19 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:get/get.dart';
+import 'package:instagram_clone/bindings/chat.dart';
+
 import 'package:instagram_clone/bindings/comments.dart';
+import 'package:instagram_clone/bindings/dm.dart';
 import 'package:instagram_clone/bindings/login.dart';
 
 import 'package:instagram_clone/bindings/register.dart';
 import 'package:instagram_clone/bindings/splash.dart';
 import 'package:instagram_clone/bindings/tab.dart';
+import 'package:instagram_clone/modules/chat/chat_screen.dart';
 import 'package:instagram_clone/modules/comments/comments_screen.dart';
+import 'package:instagram_clone/modules/dm/dm_screen.dart';
 import 'package:instagram_clone/modules/login/login_screen.dart';
 import 'package:instagram_clone/modules/mainScreen/main_screen.dart';
 import 'package:instagram_clone/modules/profile/profile_screen.dart';
@@ -25,8 +31,8 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    Firebase.initializeApp();
     return GetMaterialApp(
-      smartManagement: SmartManagement.keepFactory,
       theme: ThemeData(
         primaryColor: Colors.red,
         primarySwatch: Colors.red,
@@ -60,7 +66,17 @@ class MyApp extends StatelessWidget {
             binding: CommentsBinding()),
         GetPage(
             name: '/TabScreen', page: () => TabScreen(), binding: TabBinding()),
-        GetPage(name: '/ProfileScreen', page: () => ProfileScreen())
+        GetPage(name: '/ProfileScreen', page: () => ProfileScreen()),
+        GetPage(
+          name: '/ChatScreen',
+          page: () => ChatScreen(),
+          binding: ChatBinding(),
+        ),
+        GetPage(
+          name: '/DmScreen',
+          page: () => DmScreen(),
+          binding: DmBinding(),
+        ),
       ],
     );
   }
